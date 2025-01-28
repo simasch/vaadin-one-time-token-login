@@ -5,14 +5,11 @@ import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.H2;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
-import com.vaadin.flow.router.RouteAlias;
 import jakarta.annotation.security.RolesAllowed;
 import org.springframework.security.core.context.SecurityContextHolder;
 
 @RolesAllowed({Roles.USER, Roles.ADMIN})
 @Route("")
-// This is the default path Spring Security sends the user to if the login with the OT was successful
-@RouteAlias("/ott/sent")
 public class MainView extends VerticalLayout {
 
     public MainView() {
